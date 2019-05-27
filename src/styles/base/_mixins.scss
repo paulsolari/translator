@@ -1,0 +1,23 @@
+@mixin breakpoint($bp) {
+	@media (max-width: $bp) {
+		@content;
+	}
+}
+
+@mixin hover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: minmax(100px, 50%) minmax(100px, 50%);
+    grid-column-gap: 50px;
+
+    @include breakpoint($sm) {
+        grid-column-gap: 30px;
+    }
+}
