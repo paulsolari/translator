@@ -49,8 +49,7 @@ module.exports = {
     devServer: {
         historyApiFallback: true,
         noInfo: true,
-        overlay: true,
-        host: "192.168.1.2"
+        overlay: true
     },
     performance: {
         hints: false
